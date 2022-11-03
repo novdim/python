@@ -16,11 +16,26 @@ def SumDigitsNumber(number):
     print(sum)
 
 
-n = float(input())
-SumDigitsNumber(n)
+# n = float(input())
+# SumDigitsNumber(n)
 
 # Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 # Пример:
+
+
+def ListFactorial(number):
+    s = []
+    y = 1
+    for x in range(1, number+1):
+        s.append(y*x) 
+        y *= x
+    print(s)
+
+
+nn = int(input())
+ListFactorial(nn)
+
+
 
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 # Задайте список из k чисел последовательности (1 + 1\k)^k и выведите на экран их сумму.
