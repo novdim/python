@@ -27,6 +27,13 @@ def MultiplicationListItems(list):
 
 # MultiplicationListItems(list2)
 
+
+# Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+
+# Пример:
+
+# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
 list = [1.1, 1.2, 3.1, 5, 10.01]
 
 def DifferenceMaxMinFractionalParts(list, number_decimal_places):
@@ -39,14 +46,20 @@ def DifferenceMaxMinFractionalParts(list, number_decimal_places):
             max = x%1
     print(round((max-min),number_decimal_places))
 
-DifferenceMaxMinFractionalParts(list,2)
+#DifferenceMaxMinFractionalParts(list,2)
 
+def DecimalToBinary(number):
+    print('Преобразовать десятичное числов двоичное можно используя встроенную функцию bin срезав 2 первых символа')
+    print(bin(number)[2:])
 
-# Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+    print('Или делить каждый раз на 2 =)')
+    numberb = ''
+    while number > 0:
+        numberb  += str(number % 2)
+        number = number // 2
+    print(numberb)
 
-# Пример:
-
-# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+DecimalToBinary(int(45))
 # Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
 # Пример:
