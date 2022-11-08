@@ -10,7 +10,7 @@ list1 = [2, 3, 5, 9, 3]
 def SumOfOddListItems(list):
     print(sum(list[1::2]))
 
-# SumOfOddListItems(list1)
+SumOfOddListItems(list1)
 
 # Напишите программу, которая найдёт произведение пар чисел списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 
@@ -25,7 +25,7 @@ def MultiplicationListItems(list):
     new_list = [list[x] * list[-x-1] for x in range(0,math.ceil(len(list)/2))] 
     print(new_list)
 
-# MultiplicationListItems(list2)
+MultiplicationListItems(list2)
 
 
 # Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
@@ -46,7 +46,7 @@ def DifferenceMaxMinFractionalParts(list, number_decimal_places):
             max = x%1
     print(round((max-min),number_decimal_places))
 
-#DifferenceMaxMinFractionalParts(list,2)
+DifferenceMaxMinFractionalParts(list,2)
 
 # Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
@@ -67,7 +67,7 @@ def DecimalToBinary(number):
         number = number // 2
     print(numberb)
 
-# DecimalToBinary(int(45))
+DecimalToBinary(int(45))
 
 # Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
 
@@ -79,20 +79,17 @@ def DecimalToBinary(number):
 def Negafibonacci(n):
     list_negafibonacci = []
     for i in range(-n, n+1):
-        print(i)
         if i >= 0:
             id_x = range(i+1)
             list = [0,1]
             for x in id_x[2:]:
                 list.append(list[x-1] + list[x-2])
-                print(list)
             list_negafibonacci.append(list[i])                 
         else:
             id_x = range((-(i-1))+1)
             list = [1,0]
             for x in id_x[2:]:
                 list.append(list[x-2] - list[x-1])
-                print(list)
             list.reverse()
             list_negafibonacci.append(list[i-2])         
     print(list_negafibonacci)
